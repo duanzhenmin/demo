@@ -10,4 +10,4 @@
 进而实现字母索引功能
 
 **demo：**
-![](https://github.com/duanzhenmin/demo/blob/master/images/sidebar.jpg)
+![](https://github.com/duanzhenmin/demo/blob/master/sidlebar/images/sidebar.jpg)

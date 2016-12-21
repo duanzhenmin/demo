@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="common.css" />
+		<style type="text/css">
+			.table,
+			.table * {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			.table {
+				width: 600px;
+				margin: 0 auto;
+			}
+			
+			.table .thead li,
+			.table .tbody>ul>li {
+				width: 14.25%;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border-bottom: 1px solid #aaa;
+				border-left: 1px solid #aaa;
+				float: left;
+			}
+			
+			.table>* {
+				border-right: 1px solid #aaa;
+			}
+			
+			.table .thead>li {
+				border-top: 1px solid #aaa;
+			}
+			
+			.table .tbody ul li {
+				cursor: pointer;
+			}
+			
+			.table .tbody .my-date-pre {
+				color: blue;
+			}
+			
+			.table .tbody .my-date-next {
+				color: red;
+			}
+			
+			.table .tbody .my-date-now {
+				background: #ccc;
+			}
+			
+			h2 {
+				text-align: center;
+				padding: 15px;
+			}
+			
+			p.btn {
+				text-align: center;
+				padding-bottom: 10px;
+			}
+		</style>
+		<script src="myDate.js"></script>
+	</head>
+
+	<body>
+		<h2></h2>
+		<p class="btn">
+			<button class="pre">pre</button>
+			<button class="next">next</button>
+		</p>
+		<div id="MyDate"></div>
+
+		<script type="text/javascript">
+			new MyDate({
+				el: "#MyDate",
+				pre: ".pre",
+				next: ".next",
+				nowDate: "2016-12-12",
+				minDate: "2016-7",
+				maxDate: "2017-7",
+				even: "click",
+				evenFn: function(data) {
+					console.log(data.time);
+				},
+				loadEnd: function(date) {
+					document.querySelector("h2").innerHTML = date;
+				}
+			});
+		</script>
+	</body>
+
+</html>

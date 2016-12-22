@@ -1,7 +1,3 @@
-/**
- * (c) Copyright 2016 zhenmin. All Rights Reserved.
- */
-
 
 /**
  * @param {Object} options 
